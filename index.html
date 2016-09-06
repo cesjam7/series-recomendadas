@@ -2,6 +2,9 @@
 <head>
 	<title>Mis series recomendadas</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+	<style>
+		.tachar { text-decoration: line-through; }
+	</style
 </head>
 <body ng-init="series = [
 	'Breaking Bad',
@@ -13,7 +16,8 @@
 <p>Marca las series que ya viste</p>
 <ul>
 	<li ng-repeat="serie in series">
-		<input type="checkbox"> {{ serie }}
+		<input type="checkbox" ng-model="visto"> 
+		<span ng-class="{'tachar':visto}">{{ serie }}</span>
 	</li>
 </ul>
 <h2>Agrega los tuyos</h2>
