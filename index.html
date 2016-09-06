@@ -17,7 +17,7 @@
 	</li>
 </ul>
 <h2>Agrega los tuyos</h2>
-<input type="text" placeholder="Nueva serie">
-<button>Agregar al listado</button>
+<input type="text" ng-model="serie" placeholder="Nueva serie">
+<button ng-click="series.push(serie); serie = ''">Agrega</button>
 </body>
 </html>
